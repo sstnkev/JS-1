@@ -1,0 +1,9 @@
+'use strict'
+
+let dostup = 'доступ'
+let morpech = 'морпех'
+let naled = 'наледь'
+let poprek ='попрек'
+let rubilo ='рубило'
+let summSymbol = dostup+morpech+naled+poprek+rubilo
+alert(summSymbol.length)
