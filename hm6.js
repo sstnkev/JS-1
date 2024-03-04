@@ -1,20 +1,14 @@
 'use strict'
 
-const fooBoo = () => {
-    let boolean = prompt('Введите true или false')
-    const foo = () =>{
-        let nameF = 'foo'
-        console.log(nameF);
-    } 
-    const boo = () =>{
-        let nameB = 'boo'
-        console.log(nameB);
-    }
-    if(boolean==='true'){
-        foo()
-    }
-    else if(boolean==='false'){
-        boo()
-    }
-}
-fooBoo()
+let login = prompt('Введите желаемый логин')
+let password = prompt('Введите пароль для авторизации')
+const autorize = {
+    log: 0,
+    pass:0,
+};
+autorize.log = login
+autorize.pass = password
+let autorizeLogin = prompt('Для входа введите логин')
+let autorizePassword = prompt('Введите пароль для входа')
+if(autorizeLogin === login && autorizePassword === password) console.log('Добро пожаловать');
+else console.log('Данные введены неверно');

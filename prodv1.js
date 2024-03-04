@@ -1,21 +1,25 @@
 'use strict'
-
-const funcForNumber = (a,b,c) => {
-    a = Number(prompt('Введите число a'))
-    while(isNaN(a)){
-        a = Number(prompt('Введите число!!!'))
+const funcForFootballScore = () => {
+    let scoreTheFirstTeam = Number(prompt('Число забитых голов первой команды'))
+    let scoreTheSecondTeam = Number(prompt('Число забитых голов второй команды'))
+    if(scoreTheFirstTeam>9 || scoreTheSecondTeam>9){
+        console.log('В нашем футболе такого нет)');
+        return
     }
-    b = Number(prompt('Введите число b'))
-    while(isNaN(b)){
-        b = Number(prompt('Введите число!!!'))
+    const gameScore = {
+        0:'ноль',
+        1:'один',
+        2:'два',
+        3:'три',
+        4:'четыре',
+        5:'пять',
+        6:'шесть',
+        7:'семь',
+        8:'восемь',
+        9:'девять',
     }
-    c = Number(prompt('Введите число c'))
-    while(isNaN(c)){
-        c = Number(prompt('Введите число!!!'))
-    }
-    if(a+b>c && b+c>a && c+a>b){
-        console.log('True');
-    }
-    else console.log('False');
+    let home = gameScore[scoreTheFirstTeam]
+    let guest = gameScore[scoreTheSecondTeam]
+    console.log(`Счёт игры ${home}:${guest}`);
 }
-funcForNumber()
+funcForFootballScore()

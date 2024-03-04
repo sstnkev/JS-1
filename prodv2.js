@@ -1,19 +1,22 @@
 'use strict'
 
 
-const funcDivideChoсolate = (n,m) => {
-    n = Number(prompt('Введите длину плитки'))
-    m = Number(prompt('Введите ширину плитки'))
-    if(n<=0 || m<=0){
-        console.log('0 надломов');
-        return
-    }
-    let sumKubOfChocolate = n*m
-    let minFracture = sumKubOfChocolate-1
-    if(isNaN(minFracture)){
-        console.log('0 надломов');
-        return
-    }
-    console.log('Минимальное количество надломов',minFracture);
+let student1 = {
+    name: 'Polina',
+    age: 27,
 }
-funcDivideChoсolate()
+let student2 = {
+    name: 'Polina',
+    age: 27,
+}
+const funcForCompareTheseObjects = () => {
+    const keys1 = Object.keys(student1);
+    const keys2 = Object.keys(student2);
+    for(let key in keys1){
+        if(student1[key] !== student2[key]){
+            console.log('False');
+            return
+        } else console.log('True');
+    }
+}
+funcForCompareTheseObjects()

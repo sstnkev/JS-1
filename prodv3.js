@@ -1,27 +1,18 @@
 'use strict'
 
 
-const funcOfBankCredit = () =>{
-
-    let bankCredit = Number(prompt('Введите сумму желаемого кредита для покупки'))
-    while(isNaN(bankCredit)){
-        bankCredit = Number(prompt('Неверное значение. Введите сумму желаемого кредита для покупки ещё раз'))
+const animals = {
+    cat: {
+        name: 'Енчик',
+        age: 3,
+    },
+    dog: {
+        name: 'Орео',
+        age: 2,
     }
-    const mobilePrice = 1000
-    const accessoryPrice = 100
-    const taxProzent = 0.13
-    let tax = (mobilePrice + accessoryPrice)*taxProzent
-    let allPriceForOneProduct = mobilePrice + accessoryPrice + tax
-    let roundedAllPriceForOneProduct = Math.round(allPriceForOneProduct * 100) / 100;
-
-    if(roundedAllPriceForOneProduct>bankCredit){
-        console.log('Недостоточно средств для покупки');
-        return
-    }
-    let sumOfPurchase = Math.floor(bankCredit / roundedAllPriceForOneProduct)
-    console.log(`Приобретено ${sumOfPurchase} смартфонов и ${sumOfPurchase} акссесуаров`);
-    let loanBalance = bankCredit - (roundedAllPriceForOneProduct*sumOfPurchase)
-    console.log('Сумма оставшегося кредита', loanBalance);
 }
-funcOfBankCredit()
+animals.bird = 'Maga'
+for(let key in animals){
+    console.log(animals[key]);
+} 
 

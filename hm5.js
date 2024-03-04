@@ -1,18 +1,17 @@
 'use strict'
-const getSum = (a,b) => {
-    a = Number(prompt('Введите число a'))
-    while(isNaN(a)){
-        a = Number(prompt('Введите число!!!'))
-    }
-    b = Number(prompt('Введите число b'))
-    while(isNaN(b)){
-        b = Number(prompt('Введите число!!!'))
-    }
-    if(a===b) return a
-    let sum = 0
-    for(a;a<=b;a++){
-        sum += a
-    }
-    console.log(sum);
+
+let salaries = {
+    andrey: 500,
+    sveta: 413,
+    anton: 987,
+    igor: 664,
+    alexandra: 199
 }
-getSum()
+let sumOfMoney = 0
+let count = 0
+for(let key in salaries){
+    sumOfMoney+=salaries[key]
+    count++
+}
+let sumOfMoneyMiddle = sumOfMoney/count
+console.log(sumOfMoneyMiddle);

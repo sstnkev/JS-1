@@ -1,14 +1,14 @@
 'use strict'
 
+let object = {
+    name: 'nikita',
+    age: 18,
+};
 
+let myKey = 'age';
 
-let number = Number(prompt('Введите желаемое сумму кредита'))
-    while(isNaN(number)){
-        number = Number(prompt('Введите числовое значение кредита!!!'))
-    }
-const funcForBank = (number) => {
-    let prozent = 0.17
-    let sumMoneyInFiveYear = 5*(number*prozent)
-    console.log('Переплата' , sumMoneyInFiveYear);
+if (myKey in object) {
+    console.log('true');
+} else {
+    console.log('false');
 }
-funcForBank(number)
