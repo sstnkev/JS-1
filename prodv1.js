@@ -1,21 +1,16 @@
 'use strict'
 
-const funcForNumber = (a,b,c) => {
-    a = Number(prompt('Введите число a'))
-    while(isNaN(a)){
-        a = Number(prompt('Введите число!!!'))
+const thisIsPolindrom = () => {
+    let string = prompt(['Введите слово для проверки на полиндром'])
+    while(typeof(string)!== 'string'){
+        string = prompt(['Введите СЛОВО для проверки на полиндром'])
     }
-    b = Number(prompt('Введите число b'))
-    while(isNaN(b)){
-        b = Number(prompt('Введите число!!!'))
-    }
-    c = Number(prompt('Введите число c'))
-    while(isNaN(c)){
-        c = Number(prompt('Введите число!!!'))
-    }
-    if(a+b>c && b+c>a && c+a>b){
-        console.log('True');
-    }
-    else console.log('False');
+    let symbolString = string.split('')
+
+    let reverseArray = symbolString.slice().reverse();
+
+    if(symbolString.join() === reverseArray.join()){
+        console.log(`${string} является палиндромом`);
+    } else console.log(`${string} не является полиндромом`);
 }
-funcForNumber()
+thisIsPolindrom()

@@ -1,17 +1,7 @@
 'use strict'
 
 
-
-const getSumNumbers = () =>{
-    let number = Number(prompt('Введите желаемое число'))
-    while(isNaN(number)){
-        number = Number(prompt('Введите число!!!'))
-    }
-    let stringNumber = String(number)
-    let sum = 0
-    for(let i = 0; i< stringNumber.length ; i++){
-        sum += parseInt(stringNumber[i])        
-    }
-    console.log(sum);
-}
-getSumNumbers()
+const students = ['Polina', 'Dasha', 'Masha']
+let spliceBorya = students.splice(2,1, 'Borya')
+let spliceAndrey = students.splice(0,1, 'Andrey')
+console.log(students);

@@ -1,16 +1,13 @@
 'use strict'
 
-const trimString = () =>{
-    let string = prompt('Введите строку')
-    let from = Number(prompt('С какого индекса начинаем обрезать?'))
-    while(isNaN(from)){
-        from = Number(prompt('С какого индекса начинаем обрезать?!!!'))
-    }
-    let to = Number(prompt('Каким индексом заканчиваем?'))
-    while(isNaN(to)){
-        to = Number(prompt('Каким индексом заканчиваем?!!!'))
-    }
-    let finnalyString = string.slice(from, to)
-    console.log(finnalyString);
+
+const numbers = [5, 43, 63, 23, 90]
+// let spliceNumber = numbers.splice(0,5) //      1 способ
+// console.log(numbers);
+
+
+
+for(let i = 0; i<numbers.length; i++){   // 2 способ
+    numbers[i]=undefined
 }
-trimString()
+console.log(numbers);
