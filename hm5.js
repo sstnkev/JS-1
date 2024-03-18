@@ -1,12 +1,5 @@
 'use strict'
 
-const cats = ['Gachito', 'Tom', 'Batman']
-// for(let i = 0; i < cats.length; i++){   // 1
-//     console.log(cats[i])
-// }
-
-
-
-// for(let item of cats){    // 2
-//     console.log(item);
-// }
+const numbers = [5, 9, 13, 24, 54, 10, 13, 99, 1, 5]
+const evenFirstNumber = numbers.find((number)=>number%2===0)
+console.log(evenFirstNumber);

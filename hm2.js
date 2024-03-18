@@ -1,4 +1,8 @@
 'use strict'
 
-const animals = ['monkey', 'dog', 'cat']
-console.log(animals[animals.length -1]);
+const users = ['Darya', 'Masha', 'Denis', 'Vitaliy', 'Polina', 'Anton']
+const usersMember = users.map((user,index)=>{
+    const counter = index
+    return `member ${counter+1} ${user}`})
+
+    console.log(usersMember);
